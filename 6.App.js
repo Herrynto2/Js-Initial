@@ -1,6 +1,6 @@
 const fibo = require('./src/AppFibo')
 const data = require('./src/AppArr')
-const validate = require('./src/AppValidate')
+const { username, password } = require('./src/AppValidate')
 
 
 
@@ -11,4 +11,5 @@ console.log(fibo(10) || "");
 console.log(new data("Heri", "082184783116", "herryheryanto22@gmail.com"));
 
 //validate
-// console.log(validate("herry"));
+console.log(username("herry2"));
+console.log(password("12345678"));
