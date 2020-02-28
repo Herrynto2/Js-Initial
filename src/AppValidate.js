@@ -1,8 +1,19 @@
-const validate = function(username, password) {
-    var letters = /^[0-9a-zA-Z]+$/;
-    if (username.value.match(letters)) {
-        console.log("data validate")
+const username = (name) => {
+    let reg = /^[\w]+$/
+    if (reg.test(name)) {
+        return true
     } else {
-        console.log("data fail")
+        return false
     }
 }
+
+const password = (pass) => {
+    let reg = /.{8,}/
+    if (reg.test(pass)) {
+        return true
+    } else {
+        return false
+    }
+}
+
+module.exports = { username, password }
